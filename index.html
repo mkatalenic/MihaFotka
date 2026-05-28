@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miha fotka</title>
+    <style>
+        body { margin: 0; background: #000; font-family: 'Segoe UI', sans-serif; }
+        h1 { text-align: center; color: white; padding: 20px; margin: 0; font-weight: 300; letter-spacing: 2px; }
+        
+        .mosaic-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+        
+        .mosaic-tile {
+            flex: 1 1 200px;
+            min-height: 200px;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            text-decoration: none;
+            transition: flex-grow 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .mosaic-tile:hover {
+            flex-grow: 2;
+            z-index: 10;
+        }
+        
+        .overlay {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 20px;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .mosaic-tile:hover .overlay { opacity: 1; }
+        .overlay h2 { margin: 0; font-size: 1.2rem; }
+        .overlay span { font-size: 0.9rem; opacity: 0.8; }
+    </style>
+</head>
+<body>
+    <h1>Miha fotka</h1>
+    <div class="mosaic-container">
+        
+        <a href="Pariz2026.html" class="mosaic-tile" style="background-image: url('photos/Pariz2026/PICT14802.JPG');">
+            <div class="overlay"><h2>Pariz2026</h2><span>11 photos</span></div>
+        </a>
+        
+        <a href="vaReke.html" class="mosaic-tile" style="background-image: url('photos/vaReke/PICT14592.JPG');">
+            <div class="overlay"><h2>Vareke</h2><span>7 photos</span></div>
+        </a>
+        
+        <a href="Lovran2026.html" class="mosaic-tile" style="background-image: url('photos/Lovran2026/PICT14613.JPG');">
+            <div class="overlay"><h2>Lovran2026</h2><span>10 photos</span></div>
+        </a>
+        
+        <a href="Pariz2025Color.html" class="mosaic-tile" style="background-image: url('photos/Pariz2025Color/scan0005.jpg');">
+            <div class="overlay"><h2>Pariz2025Color</h2><span>8 photos</span></div>
+        </a>
+        
+        <a href="Pariz2025PèreLachaiseCemetery.html" class="mosaic-tile" style="background-image: url('photos/Pariz2025PèreLachaiseCemetery/PICT14699.JPG');">
+            <div class="overlay"><h2>Pariz2025Pèrelachaisecemetery</h2><span>22 photos</span></div>
+        </a>
+        
+        <a href="Haguenau2025.html" class="mosaic-tile" style="background-image: url('photos/Haguenau2025/PICT14677.JPG');">
+            <div class="overlay"><h2>Haguenau2025</h2><span>10 photos</span></div>
+        </a>
+        
+        <a href="RightBeforeParis2025.html" class="mosaic-tile" style="background-image: url('photos/RightBeforeParis2025/PICT14473.JPG');">
+            <div class="overlay"><h2>Rightbeforeparis2025</h2><span>8 photos</span></div>
+        </a>
+        
+        <a href="Pariz2025Details.html" class="mosaic-tile" style="background-image: url('photos/Pariz2025Details/PICT14476.JPG');">
+            <div class="overlay"><h2>Pariz2025Details</h2><span>14 photos</span></div>
+        </a>
+        
+        <a href="Pariz2025BeautifulPeopleWonderfulPlaces.html" class="mosaic-tile" style="background-image: url('photos/Pariz2025BeautifulPeopleWonderfulPlaces/PICT14520.JPG');">
+            <div class="overlay"><h2>Pariz2025Beautifulpeoplewonderfulplaces</h2><span>13 photos</span></div>
+        </a>
+        
+        <a href="Pariz2025Views.html" class="mosaic-tile" style="background-image: url('photos/Pariz2025Views/PICT14466.JPG');">
+            <div class="overlay"><h2>Pariz2025Views</h2><span>21 photos</span></div>
+        </a>
+        
+    </div>
+</body>
+</html>

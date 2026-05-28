@@ -1,0 +1,401 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pariz2025Views - Miha fotka</title>
+    <style>
+        body { font-family: sans-serif; margin: 0; padding: 20px; background: #111; color: #eee; }
+        header { text-align: center; margin-bottom: 30px; }
+        a.back-btn { text-decoration: none; color: #4db8ff; font-size: 1.2rem; }
+        
+        .masonry-container {
+            column-count: 4;
+            column-gap: 15px;
+            width: 100%;
+        }
+        
+        @media (max-width: 1200px) { .masonry-container { column-count: 3; } }
+        @media (max-width: 800px) { .masonry-container { column-count: 2; } }
+        @media (max-width: 500px) { .masonry-container { column-count: 1; } }
+
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 15px;
+        }
+
+        .item-link { display: block; text-decoration: none; width: 100%; }
+
+        .masonry-item img { 
+            width: 100%; 
+            height: auto; 
+            border-radius: 4px; 
+            display: block;
+            transition: transform 0.2s ease, filter 0.2s ease;
+        }
+
+        .masonry-item:hover img { 
+            transform: scale(1.05); 
+            filter: brightness(1.1);
+        }
+
+        /* MODAL CSS */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+            overflow: auto;
+        }
+        .modal:target { display: flex; }
+
+        .modal-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            background: #000;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            max-height: 85vh;
+            display: block;
+            margin: 0 auto;
+            border-radius: 4px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: -30px; right: 0;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        
+        .modal-caption {
+            color: #ccc;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-btn">← Početna stranica</a>
+        <h1>Pariz2025Views</h1>
+        <p>21 photos</p>
+    </header>
+    <div class="masonry-container">
+        
+            <div class="masonry-item">
+                <a href="#photo-0" class="item-link">
+                    <img src="photos/Pariz2025Views/PICT14466.JPG" alt="Pariz2025Views">
+                </a>
+            </div>
+            
+            <div class="masonry-item">
+                <a href="#photo-1" class="item-link">
+                    <img src="photos/Pariz2025Views/PICT14483.JPG" alt="Pariz2025Views">
+                </a>
+            </div>
+            
+            <div class="masonry-item">
+                <a href="#photo-2" class="item-link">
+                    <img src="photos/Pariz2025Views/PICT14492.JPG" alt="Pariz2025Views">
+                </a>
+            </div>
+            
+            <div class="masonry-item">
+                <a href="#photo-3" class="item-link">
+                    <img src="photos/Pariz2025Views/PICT14503.JPG" alt="Pariz2025Views">
+                </a>
+            </div>
+            
+            <div class="masonry-item">
+                <a href="#photo-4" class="item-link">
+                    <img src="photos/Pariz2025Views/PICT14529.JPG" alt="Pariz2025Views">
+                </a>
+            </div>
+            
+            <div class="masonry-item">
+                <a href="#photo-5" class="item-link">
+                    <img src="photos/Pariz2025Views/PICT14531.JPG" alt="Pariz2025Views">
+                </a>
+            </div>
+            
+            <div class="masonry-item">
+                <a href="#photo-6" class="item-link">
+                    <img src="photos/Pariz2025Views/PICT14534.JPG" alt="Pariz2025Views">
+                </a>
+            </div>
+            
+            <div class="masonry-item">
+                <a href="#photo-7" class="item-link">
+                    <img src="photos/Pariz2025Views/PICT14543.JPG" alt="Pariz2025Views">
+                </a>
+            </div>
+            
+            <div class="masonry-item">
+                <a href="#photo-8" class="item-link">
+                    <img src="photos/Pariz2025Views/PICT14548.JPG" alt="Pariz2025Views">
+                </a>
+            </div>
+            
+            <div class="masonry-item">
+                <a href="#photo-9" class="item-link">
+                    <img src="photos/Pariz2025Views/PICT14552.JPG" alt="Pariz2025Views">
+                </a>
+            </div>
+            
+            <div class="masonry-item">
+                <a href="#photo-10" class="item-link">
+                    <img src="photos/Pariz2025Views/PICT14562.JPG" alt="Pariz2025Views">
+                </a>
+            </div>
+            
+            <div class="masonry-item">
+                <a href="#photo-11" class="item-link">
+                    <img src="photos/Pariz2025Views/PICT14643.JPG" alt="Pariz2025Views">
+                </a>
+            </div>
+            
+            <div class="masonry-item">
+                <a href="#photo-12" class="item-link">
+                    <img src="photos/Pariz2025Views/PICT14650.JPG" alt="Pariz2025Views">
+                </a>
+            </div>
+            
+            <div class="masonry-item">
+                <a href="#photo-13" class="item-link">
+                    <img src="photos/Pariz2025Views/PICT14657.JPG" alt="Pariz2025Views">
+                </a>
+            </div>
+            
+            <div class="masonry-item">
+                <a href="#photo-14" class="item-link">
+                    <img src="photos/Pariz2025Views/PICT14659.JPG" alt="Pariz2025Views">
+                </a>
+            </div>
+            
+            <div class="masonry-item">
+                <a href="#photo-15" class="item-link">
+                    <img src="photos/Pariz2025Views/PICT14662.JPG" alt="Pariz2025Views">
+                </a>
+            </div>
+            
+            <div class="masonry-item">
+                <a href="#photo-16" class="item-link">
+                    <img src="photos/Pariz2025Views/PICT14667.JPG" alt="Pariz2025Views">
+                </a>
+            </div>
+            
+            <div class="masonry-item">
+                <a href="#photo-17" class="item-link">
+                    <img src="photos/Pariz2025Views/PICT14669.JPG" alt="Pariz2025Views">
+                </a>
+            </div>
+            
+            <div class="masonry-item">
+                <a href="#photo-18" class="item-link">
+                    <img src="photos/Pariz2025Views/PICT14671.JPG" alt="Pariz2025Views">
+                </a>
+            </div>
+            
+            <div class="masonry-item">
+                <a href="#photo-19" class="item-link">
+                    <img src="photos/Pariz2025Views/PICT14753.JPG" alt="Pariz2025Views">
+                </a>
+            </div>
+            
+            <div class="masonry-item">
+                <a href="#photo-20" class="item-link">
+                    <img src="photos/Pariz2025Views/PICT14766.JPG" alt="Pariz2025Views">
+                </a>
+            </div>
+            
+    </div>
+    
+            <div id="photo-0" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close-btn">&times; Close</a>
+                    <img src="photos/Pariz2025Views/PICT14466.JPG" alt="Pariz2025Views">
+                    <div class="modal-caption">PICT14466.JPG</div>
+                </div>
+            </div>
+            
+            <div id="photo-1" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close-btn">&times; Close</a>
+                    <img src="photos/Pariz2025Views/PICT14483.JPG" alt="Pariz2025Views">
+                    <div class="modal-caption">PICT14483.JPG</div>
+                </div>
+            </div>
+            
+            <div id="photo-2" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close-btn">&times; Close</a>
+                    <img src="photos/Pariz2025Views/PICT14492.JPG" alt="Pariz2025Views">
+                    <div class="modal-caption">PICT14492.JPG</div>
+                </div>
+            </div>
+            
+            <div id="photo-3" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close-btn">&times; Close</a>
+                    <img src="photos/Pariz2025Views/PICT14503.JPG" alt="Pariz2025Views">
+                    <div class="modal-caption">PICT14503.JPG</div>
+                </div>
+            </div>
+            
+            <div id="photo-4" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close-btn">&times; Close</a>
+                    <img src="photos/Pariz2025Views/PICT14529.JPG" alt="Pariz2025Views">
+                    <div class="modal-caption">PICT14529.JPG</div>
+                </div>
+            </div>
+            
+            <div id="photo-5" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close-btn">&times; Close</a>
+                    <img src="photos/Pariz2025Views/PICT14531.JPG" alt="Pariz2025Views">
+                    <div class="modal-caption">PICT14531.JPG</div>
+                </div>
+            </div>
+            
+            <div id="photo-6" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close-btn">&times; Close</a>
+                    <img src="photos/Pariz2025Views/PICT14534.JPG" alt="Pariz2025Views">
+                    <div class="modal-caption">PICT14534.JPG</div>
+                </div>
+            </div>
+            
+            <div id="photo-7" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close-btn">&times; Close</a>
+                    <img src="photos/Pariz2025Views/PICT14543.JPG" alt="Pariz2025Views">
+                    <div class="modal-caption">PICT14543.JPG</div>
+                </div>
+            </div>
+            
+            <div id="photo-8" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close-btn">&times; Close</a>
+                    <img src="photos/Pariz2025Views/PICT14548.JPG" alt="Pariz2025Views">
+                    <div class="modal-caption">PICT14548.JPG</div>
+                </div>
+            </div>
+            
+            <div id="photo-9" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close-btn">&times; Close</a>
+                    <img src="photos/Pariz2025Views/PICT14552.JPG" alt="Pariz2025Views">
+                    <div class="modal-caption">PICT14552.JPG</div>
+                </div>
+            </div>
+            
+            <div id="photo-10" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close-btn">&times; Close</a>
+                    <img src="photos/Pariz2025Views/PICT14562.JPG" alt="Pariz2025Views">
+                    <div class="modal-caption">PICT14562.JPG</div>
+                </div>
+            </div>
+            
+            <div id="photo-11" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close-btn">&times; Close</a>
+                    <img src="photos/Pariz2025Views/PICT14643.JPG" alt="Pariz2025Views">
+                    <div class="modal-caption">PICT14643.JPG</div>
+                </div>
+            </div>
+            
+            <div id="photo-12" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close-btn">&times; Close</a>
+                    <img src="photos/Pariz2025Views/PICT14650.JPG" alt="Pariz2025Views">
+                    <div class="modal-caption">PICT14650.JPG</div>
+                </div>
+            </div>
+            
+            <div id="photo-13" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close-btn">&times; Close</a>
+                    <img src="photos/Pariz2025Views/PICT14657.JPG" alt="Pariz2025Views">
+                    <div class="modal-caption">PICT14657.JPG</div>
+                </div>
+            </div>
+            
+            <div id="photo-14" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close-btn">&times; Close</a>
+                    <img src="photos/Pariz2025Views/PICT14659.JPG" alt="Pariz2025Views">
+                    <div class="modal-caption">PICT14659.JPG</div>
+                </div>
+            </div>
+            
+            <div id="photo-15" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close-btn">&times; Close</a>
+                    <img src="photos/Pariz2025Views/PICT14662.JPG" alt="Pariz2025Views">
+                    <div class="modal-caption">PICT14662.JPG</div>
+                </div>
+            </div>
+            
+            <div id="photo-16" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close-btn">&times; Close</a>
+                    <img src="photos/Pariz2025Views/PICT14667.JPG" alt="Pariz2025Views">
+                    <div class="modal-caption">PICT14667.JPG</div>
+                </div>
+            </div>
+            
+            <div id="photo-17" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close-btn">&times; Close</a>
+                    <img src="photos/Pariz2025Views/PICT14669.JPG" alt="Pariz2025Views">
+                    <div class="modal-caption">PICT14669.JPG</div>
+                </div>
+            </div>
+            
+            <div id="photo-18" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close-btn">&times; Close</a>
+                    <img src="photos/Pariz2025Views/PICT14671.JPG" alt="Pariz2025Views">
+                    <div class="modal-caption">PICT14671.JPG</div>
+                </div>
+            </div>
+            
+            <div id="photo-19" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close-btn">&times; Close</a>
+                    <img src="photos/Pariz2025Views/PICT14753.JPG" alt="Pariz2025Views">
+                    <div class="modal-caption">PICT14753.JPG</div>
+                </div>
+            </div>
+            
+            <div id="photo-20" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close-btn">&times; Close</a>
+                    <img src="photos/Pariz2025Views/PICT14766.JPG" alt="Pariz2025Views">
+                    <div class="modal-caption">PICT14766.JPG</div>
+                </div>
+            </div>
+            
+</body>
+</html>
